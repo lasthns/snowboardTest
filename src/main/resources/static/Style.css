@@ -1,0 +1,52 @@
+body {
+    background-color: #eeeeee;
+}
+
+.loginForm {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 23px;
+    line-height: 30px;
+    width: 560px;
+    min-height: 40%;
+    margin: 70px auto;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+
+}
+
+.inputText {
+    width: 100%;
+    height: 30px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+    border: 1px solid #cccccc;
+}
+
+.readyButton {
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 23px;
+}
+
+.select {
+
+    height: 30px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+}
+
+.defaultOption {
+    font-weight: bold;
+}
+
+.alertMessage {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 13px;
+    color: #ff0000;
+    display: none;
+
+}

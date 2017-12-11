@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Тест</title>
+    <script src="Scripts.js"></script>
+    <link rel='stylesheet' id='style' href='MainStyle.css' type='text/css' media='all'/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"/>
+</head>
+<body>
+    <div class="numbersOfQuestions" id="numbersOfQuestions">
+        <input type="button" id="buttonQuestion1" class="buttonQuestion" style="background: white" value="1" onclick="get(1, this)"></input>
+        <input type="button" id="buttonQuestion2" class="buttonQuestion" value="2" onclick="get(2, this)"></input>
+        <input type="button" id="buttonQuestion3" class="buttonQuestion" value="3" onclick="get(3, this)"></input>
+        <input type="button" id="buttonQuestion4" class="buttonQuestion" value="4" onclick="get(4, this)"></input>
+        <input type="button" id="buttonQuestion5" class="buttonQuestion" value="5" onclick="get(5, this)"></input>
+        <input type="button" id="buttonQuestion6" class="buttonQuestion" value="6" onclick="get(6, this)"></input>
+        <input type="button" id="buttonQuestion7" class="buttonQuestion" value="7" onclick="get(7, this)"></input>
+        <input type="button" id="buttonQuestion8" class="buttonQuestion" value="8" onclick="get(8, this)"></input>
+        <input type="button" id="buttonQuestion9" class="buttonQuestion" value="9" onclick="get(9, this)"></input>
+        <input type="button" id="buttonQuestion10" class="buttonQuestionFinal" value="10" onclick="get(10, this)"></input>
+    </div>
+    <div class="mainTestWindow" >
+        <input type="button" class="startButton" value="Начать тест" id="startButton" onclick="startTest(this)"></input>
+        <div class="question" id="question1">
+            <span class="questionText" id="finalText">Как называется острый металлический край доски?</span>
+            <div class="pictures" style="background: url(Фото/question1.jpg); background-size: cover"></div>
+            <input class="answer" name="answer1" type="radio" id="answer1_1" value="1" style="margin-top: 30px"></input><label class="answerText" for="answer1_1">Край</label> <br/>
+            <input class="answer" name="answer1" type="radio" id="answer1_2" value="2"></input><label class="answerText" for="answer1_2">Кайт</label> <br/>
+            <input class="answer" name="answer1" type="radio" id="answer1_3" value="3"></input><label class="answerText" for="answer1_3">Кант</label> <br/>
+            <input class="answer" name="answer1" type="radio" id="answer1_4" value="4"></input><label class="answerText" for="answer1_4">Бритва</label> <br/>
+            <input type="button" class="readyButton" id="1" value="Ответить" onclick="answer(this)"></input>
+        </div>
+
+        <div class="question" id="question2">
+            <span class="questionText">Как сноубордисты называют нетронутый снег?</span>
+            <div class="pictures" style="background: url(Фото/question2.jpg); background-size: cover"></div>
+            <input class="answer" name="answer2" type="radio" id="answer2_1" value="1" style="margin-top: 30px"></input><label class="answerText" for="answer2_1">Свежак</label> <br/>
+            <input class="answer" name="answer2" type="radio" id="answer2_2" value="2"></input><label class="answerText" for="answer2_2">Пухляк</label> <br/>
+            <input class="answer" name="answer2" type="radio" id="answer2_3" value="3"></input><label class="answerText" for="answer2_3">Цельник</label> <br/>
+            <input class="answer" name="answer2" type="radio" id="answer2_4" value="4"></input><label class="answerText" for="answer2_4">Лавинник</label> <br/>
+            <input type="button" class="readyButton" id="2" value="Ответить" onclick="answer(this)"></input>
+        </div>
+
+        <div class="question" id="question3">
+            <span class="questionText">В каком году сноуборд был представлен на олимпийских играх?</span>
+            <div class="pictures" style="background: url(Фото/question3.jpg); background-size: cover"></div>
+            <input class="answer" name="answer3" type="radio" id="answer3_1" value="1" style="margin-top: 30px"></input><label class="answerText" for="answer3_1">2003г.</label> <br/>
+            <input class="answer" name="answer3" type="radio" id="answer3_2" value="2"></input><label class="answerText" for="answer3_2">1976г.</label> <br/>
+            <input class="answer" name="answer3" type="radio" id="answer3_3" value="3"></input><label class="answerText" for="answer3_3">1983г.</label> <br/>
+            <input class="answer" name="answer3" type="radio" id="answer3_4" value="4"></input><label class="answerText" for="answer3_4">1998г.</label> <br/>
+            <input type="button" class="readyButton" id="3" value="Ответить" onclick="answer(this)"></input>
+        </div>
+
+        <div class="question" id="question4">
+            <span class="questionText">Сколько человек в мире занимается сноубордом на данный момент?</span>
+            <div class="pictures" style="background: url(Фото/question4.jpg); background-size: cover"></div>
+            <input class="answer" name="answer4" type="radio" id="answer4_1" value="1" style="margin-top: 30px"></input><label class="answerText" for="answer4_1">Около 9 млн.</label> <br/>
+            <input class="answer" name="answer4" type="radio" id="answer4_2" value="2"></input><label class="answerText" for="answer4_2">Около 50 млн.</label> <br/>
+            <input class="answer" name="answer4" type="radio" id="answer4_3" value="3"></input><label class="answerText" for="answer4_3">Около 30 млн.</label> <br/>
+            <input class="answer" name="answer4" type="radio" id="answer4_4" value="4"></input><label class="answerText" for="answer4_4">Около 100 млн.</label> <br/>
+            <input type="button" class="readyButton" id="4" value="Ответить" onclick="answer(this)"></input>
+        </div>
+
+        <div class="question" id="question5">
+            <span class="questionText">Как назывался прародитель сноуборда?</span> <br/>
+            <input class="answer" name="answer5" type="radio" id="answer5_1" value="1" style="margin-top: 30px"></input><label class="answerText" for="answer5_1">Снерф</label> <br/>
+            <input class="answer" name="answer5" type="radio" id="answer5_2" value="2"></input><label class="answerText" for="answer5_2">Сноускейт</label> <br/>
+            <input class="answer" name="answer5" type="radio" id="answer5_3" value="3"></input><label class="answerText" for="answer5_3">Снегокат</label> <br/>
+            <input class="answer" name="answer5" type="radio" id="answer5_4" value="4"></input><label class="answerText" for="answer5_4">Сноурайд</label> <br/>
+            <input type="button" class="readyButton" id="5" value="Ответить" onclick="answer(this)"></input>
+        </div>
+
+        <div class="question" id="question6">
+            <span class="questionText">Какой мировой рекорд по скорости при спуске на сноуборде?</span>
+            <div class="pictures" style="background: url(Фото/question6.jpg); background-size: cover"></div>
+            <input class="answer" name="answer6" type="radio" id="answer6_1" value="1" style="margin-top: 30px"></input><label class="answerText" for="answer6_1">125 км/ч</label> <br/>
+            <input class="answer" name="answer6" type="radio" id="answer6_2" value="2"></input><label class="answerText" for="answer6_2">150 км/ч</label> <br/>
+            <input class="answer" name="answer6" type="radio" id="answer6_3" value="3"></input><label class="answerText" for="answer6_3">142 км/ч</label> <br/>
+            <input class="answer" name="answer6" type="radio" id="answer6_4" value="4"></input><label class="answerText" for="answer6_4">201 км/ч</label> <br/>
+            <input type="button" class="readyButton" id="6" value="Ответить" onclick="answer(this)"></input>
+        </div>
+
+        <div class="question" id="question7">
+            <span class="questionText">Какой процент среди любителей зимних видов спорта занимают сноубордисты?</span> <br/>
+            <input class="answer" name="answer7" type="radio" id="answer7_1" value="1" style="margin-top: 30px"></input><label class="answerText" for="answer7_1">45%</label> <br/>
+            <input class="answer" name="answer7" type="radio" id="answer7_2" value="2"></input><label class="answerText" for="answer7_2">25%</label> <br/>
+            <input class="answer" name="answer7" type="radio" id="answer7_3" value="3"></input><label class="answerText" for="answer7_3">15%</label> <br/>
+            <input class="answer" name="answer7" type="radio" id="answer7_4" value="4"></input><label class="answerText" for="answer7_4">37%</label> <br/>
+            <input type="button" class="readyButton" id="7" value="Ответить" onclick="answer(this)"></input>
+        </div>
+
+        <div class="question" id="question8">
+            <span class="questionText">Как называют сноубордиста, катающегося правой ногой вперед?</span>
+            <div class="pictures" style="background: url(Фото/question8.jpg); background-size: cover"></div>
+            <input class="answer" name="answer8" type="radio" id="answer8_1" value="1" style="margin-top: 30px"></input><label class="answerText" for="answer8_1">Правша</label> <br/>
+            <input class="answer" name="answer8" type="radio" id="answer8_2" value="2"></input><label class="answerText" for="answer8_2">Гуфи</label> <br/>
+            <input class="answer" name="answer8" type="radio" id="answer8_3" value="3"></input><label class="answerText" for="answer8_3">Регуляр</label> <br/>
+            <input class="answer" name="answer8" type="radio" id="answer8_4" value="4"></input><label class="answerText" for="answer8_4">Стандарт</label> <br/>
+            <input type="button" class="readyButton" id="8" value="Ответить" onclick="answer(this)"></input>
+        </div>
+
+        <div class="question" id="question9">
+            <span class="questionText">Что такое "Твин-тип" в сноубордическом сленге?</span> <br/>
+            <input class="answer" name="answer9" type="radio" id="answer9_1" value="1" style="margin-top: 30px"></input><label class="answerText" for="answer9_1">Стиль катания</label> <br/>
+            <input class="answer" name="answer9" type="radio" id="answer9_2" value="2"></input><label class="answerText" for="answer9_2">Тип соревнований</label> <br/>
+            <input class="answer" name="answer9" type="radio" id="answer9_3" value="3"></input><label class="answerText" for="answer9_3">Тип доски</label> <br/>
+            <input class="answer" name="answer9" type="radio" id="answer9_4" value="4"></input><label class="answerText" for="answer9_4">Тип экипировки</label> <br/>
+            <input type="button" class="readyButton" id="9" value="Ответить" onclick="answer(this)"></input>
+        </div>
+
+        <div class="question" id="question10">
+            <span class="questionText">Какие люди катаются на сноуборде?</span>
+            <div class="pictures" style="background: url(Фото/question10.jpg); background-size: cover"></div>
+            <input class="answer" name="answer10" type="radio" id="answer10_1" value="1" style="margin-top: 30px"></input><label class="answerText" for="answer10_1">Смелые</label> <br/>
+            <input class="answer" name="answer10" type="radio" id="answer10_2" value="2"></input><label class="answerText" for="answer10_2">Веселые</label> <br/>
+            <input class="answer" name="answer10" type="radio" id="answer10_3" value="3"></input><label class="answerText" for="answer10_3">Экстремальные</label> <br/>
+            <input class="answer" name="answer10" type="radio" id="answer10_4" value="4"></input><label class="answerText" for="answer10_4">Хорошие</label> <br/>
+            <input type="button" class="readyButton" id="10" value="Ответить" onclick="answer(this)"></input>
+        </div>
+
+        <div class="finalWindow" id="finalWindow">
+            <p><span class="resulTitle" id="resultTitle"></span></p>
+            <p><span class="result" id="resultPercentage"></span></p>
+            <p><span class="result" id="resultWithoutAnswer"></span></p>
+            <input type="button" class="reanswerButton" value="Пройти тест заново" onclick="returnToMain()"/>
+        </div>
+
+    </div>
+    <input type="button" class="finalButton" id="finalButton" value="Закончить тест" onclick="theEnd(this)"></input>
+</body>
+</html>
